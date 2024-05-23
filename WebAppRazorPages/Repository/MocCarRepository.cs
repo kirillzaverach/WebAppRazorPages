@@ -1,6 +1,6 @@
-﻿using WebAppRazorPages.Model;
+﻿using Project.Model;
 
-namespace WebAppRazorPages.Repository
+namespace Project.Repository
 {
     public class MocCarRepository : ICar
     {

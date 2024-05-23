@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using WebAppRazorPages.Model.AuthApp;
+using Project.Model.AuthApp;
+using Project.Repository;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using WebAppRazorPages.Repository;
 
-
-namespace WebAppRazorPages.Controllers
+namespace Project.Controllers
 {
     public class AccountController : Controller
     {
@@ -20,9 +19,9 @@ namespace WebAppRazorPages.Controllers
         }
 
         [HttpGet]
-        public void Login()
+        public IActionResult Login()
         {
-           // return View();
+            return View();
         }
 
         [HttpPost]
